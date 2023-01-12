@@ -1,0 +1,2 @@
+# EncryptDecryptFiles_Multithreaded_Threads_tdd
+Multithreaded Encryption Decryption project for multiple files
