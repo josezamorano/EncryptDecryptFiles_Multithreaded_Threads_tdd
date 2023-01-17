@@ -70,8 +70,12 @@ namespace FileEncryptDecrypt.DomainLayer
             double totalSizeKb = 0.0;
             foreach (string file in allFiles)
             {
-                var infoLengthBytes = new FileInfo(file).Length;
-                totalSizeKb += (infoLengthBytes * ONE_BYTE_IN_KILOBYTE);
+                var fileInfo = new FileInfo(file);
+                if (fileInfo.Exists)
+                {
+                    var infoLengthBytes  = fileInfo.Length;
+                    totalSizeKb += (infoLengthBytes * ONE_BYTE_IN_KILOBYTE);
+                }                    
             }
 
             return totalSizeKb;

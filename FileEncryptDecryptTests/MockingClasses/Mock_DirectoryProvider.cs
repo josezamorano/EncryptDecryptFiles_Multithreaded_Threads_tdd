@@ -1,6 +1,7 @@
 ﻿using FileEncryptDecrypt.Utils.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +12,13 @@ namespace FileEncryptDecryptTests.MockingClasses
     {
         public DirectoryInfo CreateDirectoryInPath(string fullDirectoryPath)
         {
-            throw new NotImplementedException();
+            var dir = new DirectoryInfo(fullDirectoryPath);
+            return dir;
         }
 
         public bool DirectoryExists(string fullDirectoryPath)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public string[] GetAllDirectories(string fullDirectoryPath)

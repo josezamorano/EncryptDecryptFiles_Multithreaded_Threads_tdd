@@ -40,7 +40,8 @@ namespace FileEncryptDecrypt.DataAccessLayer.IOFiles
 
             return files;            
         }
-               
+             
+        //Test
         public string CreateCipherFileName(string originalDirectory, string fullPathOriginalFile, CipherState cipherState)
         {
             string outputDirectory = CreateCipherFolderName(originalDirectory , cipherState);
@@ -52,6 +53,7 @@ namespace FileEncryptDecrypt.DataAccessLayer.IOFiles
             return newPathCipherFile;
         }
 
+        //Test
         public string RemoveCipherSuffix(string fullPathFileName)
         {
             if (String.IsNullOrEmpty(fullPathFileName))
@@ -80,6 +82,7 @@ namespace FileEncryptDecrypt.DataAccessLayer.IOFiles
             return fullPathFileName;
         }
 
+        //Test
         public string CreateCipherFolderName(string originalDirectory, CipherState cipherState)
         {
             string cleanOriginalDirectory = RemoveCipherSuffix(originalDirectory);

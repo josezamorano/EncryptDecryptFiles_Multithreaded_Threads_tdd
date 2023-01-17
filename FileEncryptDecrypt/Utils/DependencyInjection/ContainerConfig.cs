@@ -11,7 +11,8 @@ namespace FileEncryptDecrypt.Utils.DependencyInjection
         public static Autofac.IContainer Configure()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<Cipher>().As<ICipher>();            
+            builder.RegisterType<Cipher>().As<ICipher>();
+            builder.RegisterType<CipherHelper>().As<ICipherHelper>();
             builder.RegisterType<CryptographyManager>().As<ICryptographyManager>();
             builder.RegisterType<DirectoryProvider>().As<IDirectoryProvider>();
             builder.RegisterType<FileService>().As<IFileService>();
